@@ -3,75 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movies - American Films</title>
-</head>
-<body style="margin:0; font-family: Arial, sans-serif; background-color:#000; color:#fff;">
-  <!-- Header -->
-  <header style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      background-color: #111;
+  <title>Popular Movies</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
       padding: 20px;
-      border-bottom: 3px solid #00ff66;
-    ">
-    <img src="images/ChatGPT Image 7 oct. 2025, 22_04_17.png" 
-         alt="American Films Logo" 
-         style="width: 120px; border-radius: 10px;">
-    <h1 style="font-size: 2em; margin: 0;">American Films</h1>
+      background-color: #1a1a1a;
+    }
+
+    header img {
+      width: 120px;
+      vertical-align: middle;
+    }
+
+    h1 {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 2rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .movie {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .movie:hover {
+      transform: scale(1.05);
+    }
+
+    .movie img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .movie h3 {
+      margin: 10px;
+      font-size: 1.2rem;
+    }
+
+    .movie p {
+      margin: 0 10px 10px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      margin-top: 30px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="American Films Logo">
+    <h1>Popular Movies</h1>
   </header>
 
-  <!-- Navigation -->
-  <nav style="
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background-color: #222;
-      padding: 15px 0;
-      border-bottom: 2px solid #00ff66;
-    ">
-    <a href="index.html" style="color: white; text-decoration: none;">Home</a>
-    <a href="movies.html" style="color: #00ff66; text-decoration: none; font-weight: bold;">Movies</a>
-    <a href="#" style="color: white; text-decoration: none;">Contact</a>
-  </nav>
+  <main>
+    <!-- 20 popular movies -->
+    <div class="movie">
+      <img src="images/inception.jpg" alt="Inception">
+      <h3>Inception</h3>
+      <p>A thief who steals corporate secrets through dreams must plant an idea in a CEO’s mind.</p>
+    </div>
 
-  <!-- Movies Section -->
-  <main style="padding: 40px;">
-    <h2 style="text-align:center;">Popular American Movies</h2>
-    <div style="
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      ">
-      <!-- Movie 1 -->
-      <div style="background-color:#111; border-radius:15px; padding:15px; text-align:center;">
-        <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg" 
-             alt="Inception Poster" 
-             style="width:100%; border-radius:10px;">
-        <h3>Inception (2010)</h3>
-        <p>A mind-bending sci-fi thriller directed by Christopher Nolan.</p>
-      </div>
+    <div class="movie">
+      <img src="images/interstellar.jpg" alt="Interstellar">
+      <h3>Interstellar</h3>
+      <p>A group of explorers travel through a wormhole in search of a new home for humanity.</p>
+    </div>
 
-      <!-- Movie 2 -->
-      <div style="background-color:#111; border-radius:15px; padding:15px; text-align:center;">
-        <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" 
-             alt="Pulp Fiction Poster" 
-             style="width:100%; border-radius:10px;">
-        <h3>Pulp Fiction (1994)</h3>
-        <p>Quentin Tarantino’s iconic masterpiece of crime and dark humor.</p>
-      </div>
+    <div class="movie">
+      <img src="images/avatar.jpg" alt="Avatar">
+      <h3>Avatar</h3>
+      <p>A paraplegic marine on an alien planet becomes torn between duty and freedom.</p>
+    </div>
 
-      <!-- Movie 3 -->
-      <div style="background-color:#111; border-radius:15px; padding:15px; text-align:center;">
-        <img src="https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg" 
-             alt="The Godfather Poster" 
-             style="width:100%; border-radius:10px;">
-        <h3>The Godfather (1972)</h3>
-        <p>Francis Ford Coppola’s legendary crime saga about the Corleone family.</p>
-      </div>
+    <div class="movie">
+      <img src="images/the-dark-knight.jpg" alt="The Dark Knight">
+      <h3>The Dark Knight</h3>
+      <p>Batman faces the Joker, a criminal mastermind who wants to push Gotham into chaos.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/titanic.jpg" alt="Titanic">
+      <h3>Titanic</h3>
+      <p>A young couple from different backgrounds fall in love aboard the ill-fated ship.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/forrest-gump.jpg" alt="Forrest Gump">
+      <h3>Forrest Gump</h3>
+      <p>The story of a kind-hearted man witnessing major historical events in the U.S.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/jurassic-park.jpg" alt="Jurassic Park">
+      <h3>Jurassic Park</h3>
+      <p>Scientists clone dinosaurs to open a theme park — until things go terribly wrong.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/star-wars.jpg" alt="Star Wars">
+      <h3>Star Wars: A New Hope</h3>
+      <p>Luke Skywalker joins forces to defeat the evil Galactic Empire.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/fight-club.jpg" alt="Fight Club">
+      <h3>Fight Club</h3>
+      <p>An insomniac office worker forms a fight club with a soap maker.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/gladiator.jpg" alt="Gladiator">
+      <h3>Gladiator</h3>
+      <p>A betrayed Roman general seeks revenge against the corrupt emperor.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/the-godfather.jpg" alt="The Godfather">
+      <h3>The Godfather</h3>
+      <p>The aging patriarch of an organized crime dynasty transfers control to his son.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/pirates.jpg" alt="Pirates of the Caribbean">
+      <h3>Pirates of the Caribbean</h3>
+      <p>Captain Jack Sparrow embarks on adventures in search of cursed treasure.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/shawshank.jpg" alt="The Shawshank Redemption">
+      <h3>The Shawshank Redemption</h3>
+      <p>Two imprisoned men bond over years, finding solace and eventual redemption.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/avengers.jpg" alt="The Avengers">
+      <h3>The Avengers</h3>
+      <p>Earth's mightiest heroes unite to fight against Loki and his alien army.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/spiderman.jpg" alt="Spider-Man">
+      <h3>Spider-Man</h3>
+      <p>A teenager gains spider-like abilities and fights crime in New York City.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/harry-potter.jpg" alt="Harry Potter">
+      <h3>Harry Potter and the Sorcerer's Stone</h3>
+      <p>A young boy discovers he is a wizard and attends Hogwarts School of Magic.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/lord-of-the-rings.jpg" alt="Lord of the Rings">
+      <h3>Lord of the Rings</h3>
+      <p>Frodo sets out on a journey to destroy the powerful One Ring.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/back-to-the-future.jpg" alt="Back to the Future">
+      <h3>Back to the Future</h3>
+      <p>A teenager accidentally travels back in time in a DeLorean car.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/black-panther.jpg" alt="Black Panther">
+      <h3>Black Panther</h3>
+      <p>The king of Wakanda rises to the throne and protects his nation.</p>
+    </div>
+
+    <div class="movie">
+      <img src="images/joker.jpg" alt="Joker">
+      <h3>Joker</h3>
+      <p>A mentally troubled comedian embarks on a downward spiral into madness.</p>
     </div>
   </main>
+
+  <footer>
+    <p>© 2025 American Films. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
+
