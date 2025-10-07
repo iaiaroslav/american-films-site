@@ -1,142 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Popular Movies</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movies — American Films</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="movies.html" class="active">Movies</a></li>
-      </ul>
-    </nav>
+  <!-- Top nav -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html">
+        <img class="site-logo" src="images/logo.png" alt="American Films logo">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="movies.html">Movies</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>
-      <img src="images/logo.png" alt="American Films Logo" style="width:80px; vertical-align:middle; margin-right:10px;">
-      Popular Movies
-    </h1>
+  <main class="page">
+    <section class="section">
+      <h2 class="section-title">Popular</h2>
+      <div class="row">
+        <!-- Popular: 8 items -->
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/51s+3J0o2ML._AC_.jpg" alt="Inception">
+          <div class="card-info">
+            <h3>Inception</h3>
+            <p>A thief who infiltrates dreams to steal secrets is asked to plant an idea.</p>
+          </div>
+        </article>
 
-    <section class="movies-grid">
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/51s+3J0o2ML._AC_.jpg" alt="Inception">
-        <h2>Inception</h2>
-        <p>A thief who steals secrets through dreams must plant an idea in a CEO’s mind.</p>
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1188_.jpg" alt="Interstellar">
+          <div class="card-info">
+            <h3>Interstellar</h3>
+            <p>Explorers travel through a wormhole to secure humanity's future.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/81mL+vH6aML._AC_SY679_.jpg" alt="Avatar">
+          <div class="card-info">
+            <h3>Avatar</h3>
+            <p>A marine torn between duty and protecting an alien world.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/51zUbui+gbL._AC_.jpg" alt="The Dark Knight">
+          <div class="card-info">
+            <h3>The Dark Knight</h3>
+            <p>Batman faces the Joker, who wants to plunge Gotham into chaos.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71rNJQ2g-EL._AC_SY679_.jpg" alt="Titanic">
+          <div class="card-info">
+            <h3>Titanic</h3>
+            <p>A tragic love story aboard the doomed RMS Titanic.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="The Shawshank Redemption">
+          <div class="card-info">
+            <h3>The Shawshank Redemption</h3>
+            <p>Friendship and hope inside a maximum security prison.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71lZ9dYJESL._AC_SY679_.jpg" alt="Forrest Gump">
+          <div class="card-info">
+            <h3>Forrest Gump</h3>
+            <p>A simple man unwittingly influences history while searching for love.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71d7rfzM4wL._AC_SY679_.jpg" alt="Jurassic Park">
+          <div class="card-info">
+            <h3>Jurassic Park</h3>
+            <p>Cloned dinosaurs escape containment in a theme park.</p>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1188_.jpg" alt="Interstellar">
-        <h2>Interstellar</h2>
-        <p>Explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+    <section class="section">
+      <h2 class="section-title">Classics</h2>
+      <div class="row">
+        <!-- Classics: 6 items -->
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/41+eK8zBwQL._AC_.jpg" alt="The Godfather">
+          <div class="card-info">
+            <h3>The Godfather</h3>
+            <p>The Corleone family navigates power, loyalty and betrayal.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/81A-mvlo+QL._AC_SY679_.jpg" alt="Gladiator">
+          <div class="card-info">
+            <h3>Gladiator</h3>
+            <p>A Roman general seeks vengeance after betrayal.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" alt="Fight Club">
+          <div class="card-info">
+            <h3>Fight Club</h3>
+            <p>An underground fight club questions identity and consumer culture.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/51v5ZpFyaFL._AC_.jpg" alt="Star Wars">
+          <div class="card-info">
+            <h3>Star Wars: A New Hope</h3>
+            <p>Luke Skywalker begins a journey to fight the Galactic Empire.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/81zGmZKQ0UL._AC_SY679_.jpg" alt="The Lion King">
+          <div class="card-info">
+            <h3>The Lion King</h3>
+            <p>A young lion prince learns responsibility and courage.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/91zA1I7n4LL._AC_SY679_.jpg" alt="Back to the Future">
+          <div class="card-info">
+            <h3>Back to the Future</h3>
+            <p>A teenager accidentally travels back in time in a DeLorean.</p>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81mL+vH6aML._AC_SY679_.jpg" alt="Avatar">
-        <h2>Avatar</h2>
-        <p>A marine on an alien planet becomes torn between following orders and protecting his new home.</p>
-      </div>
+    <section class="section">
+      <h2 class="section-title">New Releases</h2>
+      <div class="row">
+        <!-- New releases: 6 items -->
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/91pYF0R2BzL._AC_SY679_.jpg" alt="Oppenheimer">
+          <div class="card-info">
+            <h3>Oppenheimer</h3>
+            <p>The story of the man behind the atomic bomb.</p>
+          </div>
+        </article>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81aA7hEEykL._AC_SY679_.jpg" alt="The Dark Knight">
-        <h2>The Dark Knight</h2>
-        <p>Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos.</p>
-      </div>
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71t7cdj9a+L._AC_SY679_.jpg" alt="Parasite">
+          <div class="card-info">
+            <h3>Parasite</h3>
+            <p>Class conflict and dark satire in modern society.</p>
+          </div>
+        </article>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/91zA1I7n4LL._AC_SY679_.jpg" alt="Titanic">
-        <h2>Titanic</h2>
-        <p>A young couple from different social classes fall in love aboard the ill-fated ship.</p>
-      </div>
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/81u8oE4hsTL._AC_SY679_.jpg" alt="Avengers Endgame">
+          <div class="card-info">
+            <h3>Avengers: Endgame</h3>
+            <p>The Avengers unite to undo Thanos' decimation.</p>
+          </div>
+        </article>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" alt="The Shawshank Redemption">
-        <h2>The Shawshank Redemption</h2>
-        <p>Two imprisoned men bond over a number of years, finding solace and redemption.</p>
-      </div>
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/71FJxHOnSEL._AC_SY679_.jpg" alt="Black Panther">
+          <div class="card-info">
+            <h3>Black Panther</h3>
+            <p>The king of Wakanda defends his nation and legacy.</p>
+          </div>
+        </article>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/71lZ9dYJESL._AC_SY679_.jpg" alt="Forrest Gump">
-        <h2>Forrest Gump</h2>
-        <p>The story of a man with a low IQ who influences several historical events.</p>
-      </div>
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/91WkzY1PVoL._AC_SY679_.jpg" alt="Joker">
+          <div class="card-info">
+            <h3>Joker</h3>
+            <p>A man descends into madness and becomes a symbol of chaos.</p>
+          </div>
+        </article>
 
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" alt="Fight Club">
-        <h2>Fight Club</h2>
-        <p>An insomniac office worker and a soap maker form an underground fight club.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" alt="The Matrix">
-        <h2>The Matrix</h2>
-        <p>A hacker discovers the world he lives in is a simulated reality.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81r3FVfNG3L._AC_SY679_.jpg" alt="Pulp Fiction">
-        <h2>Pulp Fiction</h2>
-        <p>The lives of two mob hitmen, a boxer, and others intertwine in a series of stories.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81A-mvlo+QL._AC_SY679_.jpg" alt="Gladiator">
-        <h2>Gladiator</h2>
-        <p>A Roman general seeks revenge after being betrayed and losing his family.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/91D7q7kI+bL._AC_SY679_.jpg" alt="The Godfather">
-        <h2>The Godfather</h2>
-        <p>The aging patriarch of an organized crime dynasty transfers control to his son.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81zGmZKQ0UL._AC_SY679_.jpg" alt="The Lion King">
-        <h2>The Lion King</h2>
-        <p>A lion cub prince flees his kingdom after the murder of his father.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/91WkzY1PVoL._AC_SY679_.jpg" alt="Joker">
-        <h2>Joker</h2>
-        <p>A mentally troubled comedian embarks on a downward spiral to become the infamous villain.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81u8oE4hsTL._AC_SY679_.jpg" alt="Avengers: Endgame">
-        <h2>Avengers: Endgame</h2>
-        <p>The Avengers assemble once more to undo the destruction caused by Thanos.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81tCWiD9xHL._AC_SY679_.jpg" alt="La La Land">
-        <h2>La La Land</h2>
-        <p>A jazz musician and an aspiring actress fall in love while pursuing their dreams.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81zpLhP1gWL._AC_SY679_.jpg" alt="The Wolf of Wall Street">
-        <h2>The Wolf of Wall Street</h2>
-        <p>Based on the true story of Jordan Belfort, a stockbroker who rose to prominence through corruption.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/71t7cdj9a+L._AC_SY679_.jpg" alt="Parasite">
-        <h2>Parasite</h2>
-        <p>Greed and class discrimination threaten the relationship between two families.</p>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/I/81pYF0R2BzL._AC_SY679_.jpg" alt="Oppenheimer">
-        <h2>Oppenheimer</h2>
-        <p>The story of the man who developed the atomic bomb and faced its consequences.</p>
+        <article class="card">
+          <img src="https://m.media-amazon.com/images/I/81zpLhP1gWL._AC_SY679_.jpg" alt="Wolf of Wall Street">
+          <div class="card-info">
+            <h3>The Wolf of Wall Street</h3>
+            <p>Rise and fall of a corrupt stockbroker in the 1990s.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© 2025 American Films</p>
+  </footer>
 </body>
 </html>
