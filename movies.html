@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Movies — American Films</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Top nav -->
   <header class="site-header">
     <div class="nav-inner">
       <a class="logo-link" href="index.html">
-        <img class="site-logo" src="images/logo.png" alt="American Films logo">
+        <img class="site-logo" src="images/logo.png" alt="American Films logo" onerror="this.style.display='none'">
+        <span class="logo-fallback">American Films</span>
       </a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
@@ -21,180 +21,120 @@
   </header>
 
   <main class="page">
+    <!-- Popular -->
     <section class="section">
       <h2 class="section-title">Popular</h2>
       <div class="row">
-        <!-- Popular: 8 items -->
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/51s+3J0o2ML._AC_.jpg" alt="Inception">
-          <div class="card-info">
-            <h3>Inception</h3>
-            <p>A thief who infiltrates dreams to steal secrets is asked to plant an idea.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/5101c1j5uGL._AC_.jpg" alt="Inception">
+          <div class="overlay"><h3>Inception</h3><p>A thief enters dreams to plant an idea in a CEO’s mind.</p></div>
         </article>
 
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1188_.jpg" alt="Interstellar">
-          <div class="card-info">
-            <h3>Interstellar</h3>
-            <p>Explorers travel through a wormhole to secure humanity's future.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Interstellar">
+          <div class="overlay"><h3>Interstellar</h3><p>Explorers travel through a wormhole to save humanity.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/81mL+vH6aML._AC_SY679_.jpg" alt="Avatar">
-          <div class="card-info">
-            <h3>Avatar</h3>
-            <p>A marine torn between duty and protecting an alien world.</p>
-          </div>
+          <div class="overlay"><h3>Avatar</h3><p>A marine torn between orders and protecting an alien world.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/51zUbui+gbL._AC_.jpg" alt="The Dark Knight">
-          <div class="card-info">
-            <h3>The Dark Knight</h3>
-            <p>Batman faces the Joker, who wants to plunge Gotham into chaos.</p>
-          </div>
+          <div class="overlay"><h3>The Dark Knight</h3><p>Batman faces the Joker’s reign of chaos in Gotham.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/71rNJQ2g-EL._AC_SY679_.jpg" alt="Titanic">
-          <div class="card-info">
-            <h3>Titanic</h3>
-            <p>A tragic love story aboard the doomed RMS Titanic.</p>
-          </div>
+          <div class="overlay"><h3>Titanic</h3><p>A tragic love story aboard the doomed RMS Titanic.</p></div>
         </article>
 
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="The Shawshank Redemption">
-          <div class="card-info">
-            <h3>The Shawshank Redemption</h3>
-            <p>Friendship and hope inside a maximum security prison.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/51NiGlapXlL._AC_.jpg" alt="The Shawshank Redemption">
+          <div class="overlay"><h3>The Shawshank Redemption</h3><p>Hope and friendship inside a maximum-security prison.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/71lZ9dYJESL._AC_SY679_.jpg" alt="Forrest Gump">
-          <div class="card-info">
-            <h3>Forrest Gump</h3>
-            <p>A simple man unwittingly influences history while searching for love.</p>
-          </div>
+          <div class="overlay"><h3>Forrest Gump</h3><p>A simple man witnesses major moments in U.S. history.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/71d7rfzM4wL._AC_SY679_.jpg" alt="Jurassic Park">
-          <div class="card-info">
-            <h3>Jurassic Park</h3>
-            <p>Cloned dinosaurs escape containment in a theme park.</p>
-          </div>
+          <div class="overlay"><h3>Jurassic Park</h3><p>Dinosaurs run wild in a high-tech theme park.</p></div>
         </article>
       </div>
     </section>
 
+    <!-- Classics -->
     <section class="section">
       <h2 class="section-title">Classics</h2>
       <div class="row">
-        <!-- Classics: 6 items -->
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/41+eK8zBwQL._AC_.jpg" alt="The Godfather">
-          <div class="card-info">
-            <h3>The Godfather</h3>
-            <p>The Corleone family navigates power, loyalty and betrayal.</p>
-          </div>
+          <div class="overlay"><h3>The Godfather</h3><p>The Corleone family’s power, loyalty, and betrayal.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/81A-mvlo+QL._AC_SY679_.jpg" alt="Gladiator">
-          <div class="card-info">
-            <h3>Gladiator</h3>
-            <p>A Roman general seeks vengeance after betrayal.</p>
-          </div>
+          <div class="overlay"><h3>Gladiator</h3><p>A Roman general seeks revenge for his murdered family.</p></div>
         </article>
 
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" alt="Fight Club">
-          <div class="card-info">
-            <h3>Fight Club</h3>
-            <p>An underground fight club questions identity and consumer culture.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/51v5ZpFyaFL._AC_.jpg" alt="Fight Club">
+          <div class="overlay"><h3>Fight Club</h3><p>An underground club spirals into chaos and identity crisis.</p></div>
         </article>
 
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/51v5ZpFyaFL._AC_.jpg" alt="Star Wars">
-          <div class="card-info">
-            <h3>Star Wars: A New Hope</h3>
-            <p>Luke Skywalker begins a journey to fight the Galactic Empire.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/71P96+9CU5L._AC_SY679_.jpg" alt="Star Wars: A New Hope">
+          <div class="overlay"><h3>Star Wars: A New Hope</h3><p>Luke Skywalker rises to fight the Galactic Empire.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/81zGmZKQ0UL._AC_SY679_.jpg" alt="The Lion King">
-          <div class="card-info">
-            <h3>The Lion King</h3>
-            <p>A young lion prince learns responsibility and courage.</p>
-          </div>
+          <div class="overlay"><h3>The Lion King</h3><p>A lion prince learns courage and leadership.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/91zA1I7n4LL._AC_SY679_.jpg" alt="Back to the Future">
-          <div class="card-info">
-            <h3>Back to the Future</h3>
-            <p>A teenager accidentally travels back in time in a DeLorean.</p>
-          </div>
+          <div class="overlay"><h3>Back to the Future</h3><p>A teen travels back in time in a DeLorean car.</p></div>
         </article>
       </div>
     </section>
 
+    <!-- New Releases -->
     <section class="section">
       <h2 class="section-title">New Releases</h2>
       <div class="row">
-        <!-- New releases: 6 items -->
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/91pYF0R2BzL._AC_SY679_.jpg" alt="Oppenheimer">
-          <div class="card-info">
-            <h3>Oppenheimer</h3>
-            <p>The story of the man behind the atomic bomb.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/81pYF0R2BzL._AC_SY679_.jpg" alt="Oppenheimer">
+          <div class="overlay"><h3>Oppenheimer</h3><p>The brilliant mind behind the atomic bomb.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/71t7cdj9a+L._AC_SY679_.jpg" alt="Parasite">
-          <div class="card-info">
-            <h3>Parasite</h3>
-            <p>Class conflict and dark satire in modern society.</p>
-          </div>
+          <div class="overlay"><h3>Parasite</h3><p>Two families collide in a dark social satire.</p></div>
         </article>
 
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81u8oE4hsTL._AC_SY679_.jpg" alt="Avengers Endgame">
-          <div class="card-info">
-            <h3>Avengers: Endgame</h3>
-            <p>The Avengers unite to undo Thanos' decimation.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/81u8oE4hsTL._AC_SY679_.jpg" alt="Avengers: Endgame">
+          <div class="overlay"><h3>Avengers: Endgame</h3><p>Earth’s mightiest heroes unite to undo Thanos’ snap.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/71FJxHOnSEL._AC_SY679_.jpg" alt="Black Panther">
-          <div class="card-info">
-            <h3>Black Panther</h3>
-            <p>The king of Wakanda defends his nation and legacy.</p>
-          </div>
+          <div class="overlay"><h3>Black Panther</h3><p>The king of Wakanda defends his nation and legacy.</p></div>
         </article>
 
         <article class="card">
           <img src="https://m.media-amazon.com/images/I/91WkzY1PVoL._AC_SY679_.jpg" alt="Joker">
-          <div class="card-info">
-            <h3>Joker</h3>
-            <p>A man descends into madness and becomes a symbol of chaos.</p>
-          </div>
+          <div class="overlay"><h3>Joker</h3><p>A failed comedian transforms into Gotham’s symbol of chaos.</p></div>
         </article>
 
         <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81zpLhP1gWL._AC_SY679_.jpg" alt="Wolf of Wall Street">
-          <div class="card-info">
-            <h3>The Wolf of Wall Street</h3>
-            <p>Rise and fall of a corrupt stockbroker in the 1990s.</p>
-          </div>
+          <img src="https://m.media-amazon.com/images/I/81zpLhP1gWL._AC_SY679_.jpg" alt="The Wolf of Wall Street">
+          <div class="overlay"><h3>The Wolf of Wall Street</h3><p>A broker’s wild rise and fall in the world of greed.</p></div>
         </article>
       </div>
     </section>
