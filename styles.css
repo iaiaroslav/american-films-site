@@ -41,7 +41,7 @@ body {
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 25px;
 }
 
@@ -56,15 +56,14 @@ body {
 
 .movie-card img {
   width: 100%;
-  height: 270px;
+  height: 300px;
   object-fit: cover;
   display: block;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.movie-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+.movie-card:hover img {
+  transform: scale(1.1);
 }
 
 .overlay {
@@ -92,3 +91,4 @@ body {
   color: #ddd;
   margin-top: 5px;
 }
+
