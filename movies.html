@@ -1,147 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Movies — American Films</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>American Films | Movies</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #1c1c1c;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #e50914;
+    }
+
+    .section {
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .movie-card {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .movie-info {
+      padding: 10px;
+    }
+
+    .movie-info h3 {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    .movie-info p {
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-inner">
-      <a class="logo-link" href="index.html">
-        <img class="site-logo" src="images/logo.png" alt="American Films logo" onerror="this.style.display='none'">
-        <span class="logo-fallback">American Films</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a class="active" href="movies.html">Movies</a>
-      </nav>
-    </div>
+
+  <header>
+    <img src="images/logo.png" alt="American Films Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="movies.html" style="color: #e50914;">Movies</a>
+    </nav>
   </header>
 
-  <main class="page">
-    <!-- Popular -->
+  <main>
+    <!-- POPULAR MOVIES -->
     <section class="section">
-      <h2 class="section-title">Popular</h2>
-      <div class="row">
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/5101c1j5uGL._AC_.jpg" alt="Inception">
-          <div class="overlay"><h3>Inception</h3><p>A thief enters dreams to plant an idea in a CEO’s mind.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Interstellar">
-          <div class="overlay"><h3>Interstellar</h3><p>Explorers travel through a wormhole to save humanity.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81mL+vH6aML._AC_SY679_.jpg" alt="Avatar">
-          <div class="overlay"><h3>Avatar</h3><p>A marine torn between orders and protecting an alien world.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/51zUbui+gbL._AC_.jpg" alt="The Dark Knight">
-          <div class="overlay"><h3>The Dark Knight</h3><p>Batman faces the Joker’s reign of chaos in Gotham.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71rNJQ2g-EL._AC_SY679_.jpg" alt="Titanic">
-          <div class="overlay"><h3>Titanic</h3><p>A tragic love story aboard the doomed RMS Titanic.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/51NiGlapXlL._AC_.jpg" alt="The Shawshank Redemption">
-          <div class="overlay"><h3>The Shawshank Redemption</h3><p>Hope and friendship inside a maximum-security prison.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71lZ9dYJESL._AC_SY679_.jpg" alt="Forrest Gump">
-          <div class="overlay"><h3>Forrest Gump</h3><p>A simple man witnesses major moments in U.S. history.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71d7rfzM4wL._AC_SY679_.jpg" alt="Jurassic Park">
-          <div class="overlay"><h3>Jurassic Park</h3><p>Dinosaurs run wild in a high-tech theme park.</p></div>
-        </article>
+      <h2>Popular Movies</h2>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/51xJ3dQq8yL._AC_.jpg" alt="Inception">
+          <div class="movie-info">
+            <h3>Inception</h3>
+            <p>A thief who steals corporate secrets through dreams must plant an idea.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SY679_.jpg" alt="Interstellar">
+          <div class="movie-info">
+            <h3>Interstellar</h3>
+            <p>A team travels through a wormhole in space to save humanity.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/81QKqIhKjOL._AC_SY679_.jpg" alt="Avatar">
+          <div class="movie-info">
+            <h3>Avatar</h3>
+            <p>A marine torn between following orders and protecting an alien world.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/71pJZyJg-8L._AC_SY679_.jpg" alt="Titanic">
+          <div class="movie-info">
+            <h3>Titanic</h3>
+            <p>A love story aboard the doomed RMS Titanic.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/81aA7hEEykL._AC_SY679_.jpg" alt="The Dark Knight">
+          <div class="movie-info">
+            <h3>The Dark Knight</h3>
+            <p>Batman faces the Joker in Gotham City.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Classics -->
+    <!-- CLASSIC MOVIES -->
     <section class="section">
-      <h2 class="section-title">Classics</h2>
-      <div class="row">
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/41+eK8zBwQL._AC_.jpg" alt="The Godfather">
-          <div class="overlay"><h3>The Godfather</h3><p>The Corleone family’s power, loyalty, and betrayal.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81A-mvlo+QL._AC_SY679_.jpg" alt="Gladiator">
-          <div class="overlay"><h3>Gladiator</h3><p>A Roman general seeks revenge for his murdered family.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/51v5ZpFyaFL._AC_.jpg" alt="Fight Club">
-          <div class="overlay"><h3>Fight Club</h3><p>An underground club spirals into chaos and identity crisis.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71P96+9CU5L._AC_SY679_.jpg" alt="Star Wars: A New Hope">
-          <div class="overlay"><h3>Star Wars: A New Hope</h3><p>Luke Skywalker rises to fight the Galactic Empire.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81zGmZKQ0UL._AC_SY679_.jpg" alt="The Lion King">
-          <div class="overlay"><h3>The Lion King</h3><p>A lion prince learns courage and leadership.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/91zA1I7n4LL._AC_SY679_.jpg" alt="Back to the Future">
-          <div class="overlay"><h3>Back to the Future</h3><p>A teen travels back in time in a DeLorean car.</p></div>
-        </article>
+      <h2>Classics</h2>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/71VZrG2K6DL._AC_SY679_.jpg" alt="Pulp Fiction">
+          <div class="movie-info">
+            <h3>Pulp Fiction</h3>
+            <p>Interwoven stories of crime, redemption, and chaos in Los Angeles.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/81OaXwn1x4L._AC_SY679_.jpg" alt="The Matrix">
+          <div class="movie-info">
+            <h3>The Matrix</h3>
+            <p>A hacker discovers a shocking truth about reality itself.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/51NiGlapXlL._AC_.jpg" alt="Forrest Gump">
+          <div class="movie-info">
+            <h3>Forrest Gump</h3>
+            <p>The story of a man who lived through defining moments of history.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/71VZrG2K6DL._AC_SY679_.jpg" alt="The Shawshank Redemption">
+          <div class="movie-info">
+            <h3>The Shawshank Redemption</h3>
+            <p>Two imprisoned men bond over years, finding hope in despair.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/91tL1nH8QpL._AC_SY679_.jpg" alt="Star Wars: A New Hope">
+          <div class="movie-info">
+            <h3>Star Wars: A New Hope</h3>
+            <p>Luke Skywalker begins his journey to become a Jedi.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- New Releases -->
+    <!-- NEW RELEASES -->
     <section class="section">
-      <h2 class="section-title">New Releases</h2>
-      <div class="row">
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81pYF0R2BzL._AC_SY679_.jpg" alt="Oppenheimer">
-          <div class="overlay"><h3>Oppenheimer</h3><p>The brilliant mind behind the atomic bomb.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71t7cdj9a+L._AC_SY679_.jpg" alt="Parasite">
-          <div class="overlay"><h3>Parasite</h3><p>Two families collide in a dark social satire.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81u8oE4hsTL._AC_SY679_.jpg" alt="Avengers: Endgame">
-          <div class="overlay"><h3>Avengers: Endgame</h3><p>Earth’s mightiest heroes unite to undo Thanos’ snap.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/71FJxHOnSEL._AC_SY679_.jpg" alt="Black Panther">
-          <div class="overlay"><h3>Black Panther</h3><p>The king of Wakanda defends his nation and legacy.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/91WkzY1PVoL._AC_SY679_.jpg" alt="Joker">
-          <div class="overlay"><h3>Joker</h3><p>A failed comedian transforms into Gotham’s symbol of chaos.</p></div>
-        </article>
-
-        <article class="card">
-          <img src="https://m.media-amazon.com/images/I/81zpLhP1gWL._AC_SY679_.jpg" alt="The Wolf of Wall Street">
-          <div class="overlay"><h3>The Wolf of Wall Street</h3><p>A broker’s wild rise and fall in the world of greed.</p></div>
-        </article>
+      <h2>New Releases</h2>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/91YxM8sFwnL._AC_SY679_.jpg" alt="Dune: Part Two">
+          <div class="movie-info">
+            <h3>Dune: Part Two</h3>
+            <p>Paul Atreides unites desert tribes against the Empire.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/81zM3AjwTBL._AC_SY679_.jpg" alt="Oppenheimer">
+          <div class="movie-info">
+            <h3>Oppenheimer</h3>
+            <p>The story of the man who built the atomic bomb.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/71+KQy1bHXL._AC_SY679_.jpg" alt="Barbie">
+          <div class="movie-info">
+            <h3>Barbie</h3>
+            <p>Barbie and Ken explore the real world beyond Barbieland.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/81BES+KWe8L._AC_SY679_.jpg" alt="Top Gun: Maverick">
+          <div class="movie-info">
+            <h3>Top Gun: Maverick</h3>
+            <p>Maverick returns to train a new generation of fighter pilots.</p>
+          </div>
+        </div>
+        <div class="movie-card">
+          <img src="https://m.media-amazon.com/images/I/81niUoJ7vBL._AC_SY679_.jpg" alt="Spider-Man: No Way Home">
+          <div class="movie-info">
+            <h3>Spider-Man: No Way Home</h3>
+            <p>Spider-Man faces multiverse villains in his biggest challenge yet.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 American Films</p>
-  </footer>
 </body>
 </html>
+
