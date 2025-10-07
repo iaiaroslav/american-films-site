@@ -1,119 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>American Films</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Navigation bar */
-    nav {
-      background-color: #1a1a1a;
-      padding: 15px 0;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #00bfff;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #111;
-    }
-
-    header img {
-      width: 120px;
-      vertical-align: middle;
-    }
-
-    h1 {
-      display: inline-block;
-      margin-left: 15px;
-      font-size: 2.5rem;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: #00bfff;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .button:hover {
-      background-color: #008ecc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      margin-top: 50px;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Films</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo">American Films</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Genres</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="movies.html">Movies</a>
-  </nav>
+    <main class="content">
+        <section class="category">
+            <h2>Popular Movies</h2>
+            <div class="movie-row">
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1500_.jpg" alt="Inception">
+                    <h3>Inception</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg" alt="Interstellar">
+                    <h3>Interstellar</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/91O1Kxy8L1L._AC_SL1500_.jpg" alt="Avatar">
+                    <h3>Avatar</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SL1024_.jpg" alt="The Dark Knight">
+                    <h3>The Dark Knight</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/81t2CVWEsUL._AC_SL1500_.jpg" alt="Titanic">
+                    <h3>Titanic</h3>
+                </div>
+            </div>
+        </section>
 
-  <!-- Header -->
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Film_reel_icon.svg" alt="Film Logo">
-    <h1>American Films</h1>
-  </header>
-
-  <!-- Main content -->
-  <main>
-    <p>Welcome to <strong>American Films</strong> — a place where you can explore the most iconic and loved movies in American cinema history.  
-    Dive into stories that changed the world of filmmaking and discover your next favorite classic or blockbuster.</p>
-
-    <a href="movies.html" class="button">Explore Movies 🎬</a>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 American Films. All rights reserved.</p>
-  </footer>
-
+        <section class="category">
+            <h2>Action Movies</h2>
+            <div class="movie-row">
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/91qvW3dY9lL._AC_SL1500_.jpg" alt="Top Gun">
+                    <h3>Top Gun: Maverick</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/81GqtNbs+PL._AC_SL1500_.jpg" alt="Mad Max">
+                    <h3>Mad Max: Fury Road</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/91zNhzSK9-L._AC_SL1500_.jpg" alt="John Wick">
+                    <h3>John Wick</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/71tK-1+3YyL._AC_SL1024_.jpg" alt="Gladiator">
+                    <h3>Gladiator</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="https://m.media-amazon.com/images/I/81t7DkIT8kL._AC_SL1500_.jpg" alt="The Matrix">
+                    <h3>The Matrix</h3>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
 
