@@ -115,5 +115,13 @@ nav a.active {
 .back-button:hover {
   transform: scale(1.05);
 }
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
 
 
