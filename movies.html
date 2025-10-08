@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Movies | American Films</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Список фильмов
+    const movies = [
+      { title: "Inception", img: "inception.jpg" },
+      { title: "Interstellar", img: "interstellar.jpg" },
+      { title: "Avatar", img: "avatar.jpg" },
+      { title: "Titanic", img: "titanic.jpg" },
+      { title: "The Dark Knight", img: "the-dark-knight.jpg" },
+      { title: "Joker", img: "joker.jpg" },
+      { title: "Dune", img: "dune.jpg" },
+      { title: "Oppenheimer", img: "oppenheimer.jpg" },
+    ];
+
+    // Функция для подгрузки изображений
+    function loadMovies() {
+      const container = document.querySelector(".movies-grid");
+      movies.forEach(movie => {
+        const card = document.createElement("div");
+        card.className = "movie-card";
+
+        const img = document.createElement("img");
+        img.src = `images/${movie.img}?v=${Date.now()}`; // анти-кэш
+        img.alt = movie.title;
+
+        // если картинка не найдена — заглушка
+        img.onerror = () => img.src = "images/no-image.jpg";
+
+        const title = document.createElement("h3");
+        title.textContent = movie.title;
+
+        card.append(img, title);
+        container.append(card);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadMovies);
+  </script>
 </head>
 <body>
-   <header>
+  <header>
     <h1><span class="highlight">American Films</span></h1>
     <nav>
       <a href="index.html">Home</a>
@@ -18,44 +55,13 @@
   <main>
     <section class="movies-section">
       <h2>Popular Movies</h2>
-      <div class="movies-grid">
-
-        <div class="movie-card">
-          <img src="images/avatar.jpg" alt="Avatar">
-          <h3>Avatar</h3>
-        </div>
-
-        <div class="movie-card">
-          <img src="images/titanic.jpg" alt="Titanic">
-          <h3>Titanic</h3>
-        </div>
-
-        <div class="movie-card">
-          <img src="images/the-dark-knight.jpg" alt="The Dark Knight">
-          <h3>The Dark Knight</h3>
-        </div>
-
-        <div class="movie-card">
-          <img src="images/joker.jpg" alt="Joker">
-          <h3>Joker</h3>
-        </div>
-
-        <div class="movie-card">
-          <img src="images/dune.jpg" alt="Dune">
-          <h3>Dune</h3>
-        </div>
-
-        <div class="movie-card">
-          <img src="images/oppenheimer.jpg" alt="Oppenheimer">
-          <h3>Oppenheimer</h3>
-        </div>
-
-      </div>
+      <div class="movies-grid"></div>
 
       <button class="back-button" onclick="window.history.back()">← Back</button>
     </section>
   </main>
 </body>
 </html>
+
 
 
