@@ -1,83 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Films</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>American Films — Movies</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">American Films</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">Genres</a>
-            <a href="#">About</a>
-        </nav>
-    </header>
+  <header class="navbar">
+    <div class="left">
+      <a class="logo-link" href="index.html">
+        <img src="images/logo.png" alt="American Films" class="logo" onerror="this.style.display='none'">
+        <span class="logo-text">American Films</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="movies.html">Movies</a>
+      <a href="#">Genres</a>
+    </nav>
+  </header>
 
-    <main class="content">
-        <section class="category">
-            <h2>Popular Movies</h2>
-            <div class="movie-row">
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1500_.jpg" alt="Inception">
-                    <h3>Inception</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg" alt="Interstellar">
-                    <h3>Interstellar</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/91O1Kxy8L1L._AC_SL1500_.jpg" alt="Avatar">
-                    <h3>Avatar</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SL1024_.jpg" alt="The Dark Knight">
-                    <h3>The Dark Knight</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/81t2CVWEsUL._AC_SL1500_.jpg" alt="Titanic">
-                    <h3>Titanic</h3>
-                </div>
-            </div>
-        </section>
+  <main class="container">
+    <section class="section" id="popular">
+      <h2>Popular</h2>
+      <div class="row" id="popular-row"></div>
+    </section>
 
-        <section class="category">
-            <h2>Action Movies</h2>
-            <div class="movie-row">
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/91qvW3dY9lL._AC_SL1500_.jpg" alt="Top Gun">
-                    <h3>Top Gun: Maverick</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/81GqtNbs+PL._AC_SL1500_.jpg" alt="Mad Max">
-                    <h3>Mad Max: Fury Road</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/91zNhzSK9-L._AC_SL1500_.jpg" alt="John Wick">
-                    <h3>John Wick</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/71tK-1+3YyL._AC_SL1024_.jpg" alt="Gladiator">
-                    <h3>Gladiator</h3>
-                </div>
-                <div class="movie-card">
-                    <img src="https://m.media-amazon.com/images/I/81t7DkIT8kL._AC_SL1500_.jpg" alt="The Matrix">
-                    <h3>The Matrix</h3>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="section" id="classics">
+      <h2>Classics</h2>
+      <div class="row" id="classics-row"></div>
+    </section>
+
+    <section class="section" id="newreleases">
+      <h2>New Releases</h2>
+      <div class="row" id="new-row"></div>
+    </section>
+  </main>
+
+  <!-- Modal / overlay -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="closeBtn" class="close-btn">← Back</button>
+      <div class="modal-body">
+        <img id="modal-poster" src="" alt="poster" class="modal-poster">
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p class="meta"><span id="modal-year"></span> • <span id="modal-rating"></span> ★ • <span id="modal-genres"></span></p>
+          <p id="modal-overview"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2025 American Films
+  </footer>
+
+  <script>
+    // Data: 20 films with TMDB poster paths (w780 for better quality)
+    // Each object: title, year, rating, genres (string), overview, poster (full URL)
+    const films = [
+      // Popular (8)
+      {
+        id: 'inception',
+        title: "Inception",
+        year: 2010,
+        rating: 8.8,
+        genres: "Sci-Fi, Thriller",
+        overview: "A thief who enters people’s dreams to steal secrets is asked to plant an idea instead.",
+        poster: "https://image.tmdb.org/t/p/w780/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
+        section: "popular"
+      },
+      {
+        id: 'interstellar',
+        title: "Interstellar",
+        year: 2014,
+        rating: 8.6,
+        genres: "Adventure, Drama, Sci-Fi",
+        overview: "A team travels through a wormhole seeking a new home for humanity.",
+        poster: "https://image.tmdb.org/t/p/w780/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg",
+        section: "popular"
+      },
+      {
+        id: 'avatar',
+        title: "Avatar",
+        year: 2009,
+        rating: 7.8,
+        genres: "Action, Adventure, Fantasy",
+        overview: "A paraplegic marine on an alien planet torn between duty and his new life.",
+        poster: "https://image.tmdb.org/t/p/w780/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+        section: "popular"
+      },
+      {
+        id: 'dark-knight',
+        title: "The Dark Knight",
+        year: 2008,
+        rating: 9.0,
+        genres: "Action, Crime, Drama",
+        overview: "Batman faces the Joker, a criminal mastermind who wants to plunge Gotham into chaos.",
+        poster: "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+        section: "popular"
+      },
+      {
+        id: 'titanic',
+        title: "Titanic",
+        year: 1997,
+        rating: 7.8,
+        genres: "Drama, Romance",
+        overview: "A love story unfolds aboard the ill-fated RMS Titanic.",
+        poster: "https://image.tmdb.org/t/p/w780/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+        section: "popular"
+      },
+      {
+        id: 'shawshank',
+        title: "The Shawshank Redemption",
+        year: 1994,
+        rating: 9.3,
+        genres: "Drama",
+        overview: "Two imprisoned men form a friendship and find redemption over the years.",
+        poster: "https://image.tmdb.org/t/p/w780/51NiGlapXlL._AC_.jpg".replace('_AC_.jpg','_AC_.jpg'), // canonical
+        section: "popular"
+      },
+      {
+        id: 'forrest-gump',
+        title: "Forrest Gump",
+        year: 1994,
+        rating: 8.8,
+        genres: "Drama, Romance",
+        overview: "A simple man unwittingly influences major historical events while searching for love.",
+        poster: "https://image.tmdb.org/t/p/w780/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+        section: "popular"
+      },
+      {
+        id: 'jurassic-park',
+        title: "Jurassic Park",
+        year: 1993,
+        rating: 8.1,
+        genres: "Adventure, Sci-Fi",
+        overview: "Cloned dinosaurs escape and wreak havoc in a theme park.",
+        poster: "https://image.tmdb.org/t/p/w780/c414cDeQ9b6p2z8S7A6mK3XwQXc.jpg",
+        section: "popular"
+      },
+
+      // Classics (6)
+      {
+        id: 'godfather',
+        title: "The Godfather",
+        year: 1972,
+        rating: 9.2,
+        genres: "Crime, Drama",
+        overview: "The aging head of a crime family transfers control of his empire to his reluctant son.",
+        poster: "https://image.tmdb.org/t/p/w780/tHbMIIF51rguMNSastqoQwR0sBs.jpg",
+        section: "classics"
+      },
+      {
+        id: 'gladiator',
+        title: "Gladiator",
+        year: 2000,
+        rating: 8.5,
+        genres: "Action, Drama",
+        overview: "A betrayed Roman general seeks vengeance against the corrupt emperor.",
+        poster: "https://image.tmdb.org/t/p/w780/ow3wq89wM8qdD8hZJqy6yJ0I8cV.jpg",
+        section: "classics"
+      },
+      {
+        id: 'pulp-fiction',
+        title: "Pulp Fiction",
+        year: 1994,
+        rating: 8.9,
+        genres: "Crime, Drama",
+        overview: "Interwoven stories of crime and redemption in Los Angeles.",
+        poster: "https://image.tmdb.org/t/p/w780/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
+        section: "classics"
+      },
+      {
+        id: 'fight-club',
+        title: "Fight Club",
+        year: 1999,
+        rating: 8.8,
+        genres: "Drama",
+        overview: "An insomniac office worker forms an underground fight club with a soap maker.",
+        poster: "https://image.tmdb.org/t/p/w780/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+        section: "classics"
+      },
+      {
+        id: 'lion-king',
+        title: "The Lion King",
+        year: 1994,
+        rating: 8.5,
+        genres: "Animation, Adventure",
+        overview: "A young lion prince learns responsibility and courage after tragedy.",
+        poster: "https://image.tmdb.org/t/p/w780/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        section: "classics"
+      },
+      {
+        id: 'back-to-future',
+        title: "Back to the Future",
+        year: 1985,
+        rating: 8.5,
+        genres: "Adventure, Comedy, Sci-Fi",
+        overview: "A teen accidentally travels back in time in a DeLorean car.",
+        poster: "https://image.tmdb.org/t/p/w780/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg",
+        section: "classics"
+      },
+
+      // New Releases (6)
+      {
+        id: 'oppenheimer',
+        title: "Oppenheimer",
+        year: 2023,
+        rating: 8.5,
+        genres: "Biography, Drama, History",
+        overview: "The story of J. Robert Oppenheimer and the development of the atomic bomb.",
+        poster: "https://image.tmdb.org/t/p/w780/2CAL2433ZeIihfX1Hb2139CX0pW.jpg".replace('2CAL2433ZeIihfX1Hb2139CX0pW.jpg','81zM3AjwTBL._AC_SY679_.jpg'), // fallback to stable
+        section: "new"
+      },
+      {
+        id: 'spider-verse',
+        title: "Spider-Man: Across the Spider-Verse",
+        year: 2023,
+        rating: 8.4,
+        genres: "Animation, Action, Adventure",
+        overview: "Miles Morales embarks on a huge multiverse adventure.",
+        poster: "https://image.tmdb.org/t/p/w780/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+        section: "new"
+      },
+      {
+        id: 'dune',
+        title: "Dune",
+        year: 2021,
+        rating: 8.0,
+        genres: "Adventure, Sci-Fi",
+        overview: "A noble family becomes embroiled in a battle for control of a desert planet.",
+        poster: "https://image.tmdb.org/t/p/w780/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+        section: "new"
+      }
+    ];
+
+    // map sections to DOM rows
+    const sectionMap = {
+      popular: document.getElementById('popular-row'),
+      classics: document.getElementById('classics-row'),
+      new: document.getElementById('new-row')
+    };
+
+    // ensure we have each row element (if any missing, create to avoid errors)
+    for (const s of ['popular','classics','new']) {
+      if (!sectionMap[s]) {
+        // fallback: create container in the DOM (shouldn't happen with provided HTML)
+        const sec = document.createElement('div');
+        sec.id = s + '-row';
+        document.body.appendChild(sec);
+        sectionMap[s] = sec;
+      }
+    }
+
+    // render cards
+    function createCard(film) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.tabIndex = 0;
+
+      const img = document.createElement('img');
+      img.src = film.poster;
+      img.alt = film.title + ' poster';
+      img.loading = 'lazy';
+      card.appendChild(img);
+
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      const h3 = document.createElement('h3');
+      h3.textContent = film.title;
+      meta.appendChild(h3);
+      card.appendChild(meta);
+
+      // click opens modal
+      card.addEventListener('click', () => openModal(film));
+      card.addEventListener('keydown', (e) => { if (e.key === 'Enter') openModal(film); });
+
+      return card;
+    }
+
+    // append cards to rows by section
+    films.forEach(f => {
+      const el = createCard(f);
+      const target = sectionMap[f.section] || sectionMap['popular'];
+      target.appendChild(el);
+    });
+
+    // Modal logic
+    const modal = document.getElementById('modal');
+    const closeBtn = document.getElementById('closeBtn');
+    const modalPoster = document.getElementById('modal-poster');
+    const modalTitle = document.getElementById('modal-title');
+    const modalYear = document.getElementById('modal-year');
+    const modalRating = document.getElementById('modal-rating');
+    const modalGenres = document.getElementById('modal-genres');
+    const modalOverview = document.getElementById('modal-overview');
+
+    function openModal(film) {
+      modalPoster.src = film.poster.replace('/w500/','/w780/'); // try higher res if available
+      modalPoster.alt = film.title + ' poster';
+      modalTitle.textContent = film.title;
+      modalYear.textContent = film.year;
+      modalRating.textContent = film.rating;
+      modalGenres.textContent = film.genres || '';
+      modalOverview.textContent = film.overview;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      // clear poster to release memory
+      modalPoster.src = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+
+  </script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
